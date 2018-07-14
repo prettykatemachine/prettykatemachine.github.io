@@ -23,13 +23,11 @@ p {
   line-height: 2rem;
 }
 
-.containerportfolio {
-  display: inline-block;
-}
+
 .galleryImg {
   margin: 3%;
   padding: 11%;
-
+display: inline-block;
 }
 
 .galleryImg > a {
