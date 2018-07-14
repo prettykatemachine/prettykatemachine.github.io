@@ -23,6 +23,19 @@ p {
   line-height: 2rem;
 }
 
+.containerportfolio {
+  display: inline-block;
+}
+.galleryImg {
+  margin: 3%;
+  padding: 11%;
+
+}
+
+.galleryImg > a {
+  color: #000000;
+}
+
 .sidenav-trigger {
   color: #26a69a;
 }
