@@ -27,6 +27,7 @@ p {
 .galleryImg {
   margin: 3%;
   padding: 11%;
+  border: solid 3px;
 display: inline-block;
 }
 
