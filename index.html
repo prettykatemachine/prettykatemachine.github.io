@@ -1,20 +1,4 @@
-<?php
 
-if($_POST["submit"]) {
-    $recipient="katie.albee@gmail.com";
-    $subject="Form to email message";
-    $sender=$_POST["sender"];
-    $senderEmail=$_POST["senderEmail"];
-    $message=$_POST["message"];
-
-    $mailBody="Name: $sender\nEmail: $senderEmail\n\n$message";
-
-    mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");
-
-    $thankYou="<p>Thank you! Your message has been sent.</p>";
-}
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -195,13 +179,12 @@ if($_POST["submit"]) {
                 
       
                 <div class="row">
-                  <form class="col s12 action="contact.php" method="post" enctype="text/plain"">
+                  <form class="col s12 action="mailto:katie.albee@gmail.com" method="post" enctype="multipart/form-data">
                     <div class="row">
                       <div class="input-field col s6">
                         <i class="material-icons prefix">account_circle</i>
                         <input id="icon_prefix" type="text" class="validate">
                         <label for="icon_prefix"> Name</label>
-                        <input name="sender">
                       </div>
                       <div class="input-field col s6">
                         <i class="material-icons prefix">phone</i>
@@ -214,9 +197,9 @@ if($_POST["submit"]) {
                 <div class="row">
                   <div class="input-field col s6">
                       <i class="material-icons prefix">mail</i>
+      
                     <input id="email" type="email" class="validate">
                     <label for="email">Email</label>
-                    <input name="senderEmail">
                   </div>
                   <div class="input-field col s6">
                       <i class="material-icons prefix">account_balance_wallet</i>
