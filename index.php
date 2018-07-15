@@ -1,3 +1,20 @@
+<?php
+
+if($_POST["submit"]) {
+    $recipient="katie.albee@gmail.com";
+    $subject="Form to email message";
+    $sender=$_POST["sender"];
+    $senderEmail=$_POST["senderEmail"];
+    $message=$_POST["message"];
+
+    $mailBody="Name: $sender\nEmail: $senderEmail\n\n$message";
+
+    mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");
+
+    $thankYou="<p>Thank you! Your message has been sent.</p>";
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,7 +53,7 @@
       </div>
     </div>
     <div class="parallax">
-      <img src="cool-background.png" Unsplashed background img 1 "></div>
+      <img src="pink.png" Unsplashed background img 1 "></div>
   </div>
 
 
@@ -80,14 +97,14 @@
           <div class="container "> 
           
             <div class="row center">
-              <h3 class="header col s12 light ">Portfolio</h3>
+              <h3 class="header col s12  ">Portfolio</h3>
             </div>       
          
           </div>
         </div>
         
         <div class="parallax ">
-            <img src="cb2.png" Unsplashed background img 1 "></div>
+            <img src="blue.png" Unsplashed background img 1 "></div>
           </div>
     </div>
       <div class="container ">
@@ -159,12 +176,15 @@
     
     <div class="parallax-container valign-wrapper">
         <div class="section no-pad-bot">
+            <div class="row center">
+                <h3 class="header col s12 ">Contact</h3>
+              </div> 
           <div class="container">
           
           </div>
         </div>
         <div class="parallax">
-          <img src="background3.png" alt="Unsplashed background img 3"></div>
+          <img src="black.png" alt="Unsplashed background img 3"></div>
       </div>
     
       <div class="container ">
@@ -172,15 +192,16 @@
       
             <div class="row ">
               <div class="col s12 center ">
-                <h4>Contact </h4>
+                
       
                 <div class="row">
-                  <form class="col s12 action="mailto:katie.albee@gmail.com" method="post" enctype="text/plain"">
+                  <form class="col s12 action="contact.php" method="post" enctype="text/plain"">
                     <div class="row">
                       <div class="input-field col s6">
                         <i class="material-icons prefix">account_circle</i>
                         <input id="icon_prefix" type="text" class="validate">
                         <label for="icon_prefix"> Name</label>
+                        <input name="sender">
                       </div>
                       <div class="input-field col s6">
                         <i class="material-icons prefix">phone</i>
@@ -193,9 +214,9 @@
                 <div class="row">
                   <div class="input-field col s6">
                       <i class="material-icons prefix">mail</i>
-      
                     <input id="email" type="email" class="validate">
                     <label for="email">Email</label>
+                    <input name="senderEmail">
                   </div>
                   <div class="input-field col s6">
                       <i class="material-icons prefix">account_balance_wallet</i>
@@ -223,7 +244,7 @@
       <div class="row ">
         <div class="col l6 s12 ">
           <h5>Work With Me!</h5>
-          <p class="grey-text text-lighten-4 ">Ready to start your next project? That's great! Connect with me on social media or send me an email!</p>
+          <p class="grey-text text-lighten-4 ">Ready to start your next project? </p>
 
 
         </div>
