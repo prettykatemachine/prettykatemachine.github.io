@@ -1,6 +1,5 @@
 
 a:hover {
-  color: #f01e78;
   border-bottom: 3px solid #02b9cb;
 }
 .btn {
@@ -11,6 +10,8 @@ a:hover {
 
 .btn:hover {
   background-color: #02b9cb;
+  color: #f01e78;
+
 }
 
 
@@ -27,8 +28,6 @@ p {
 .galleryImg {
   margin: 3%;
   padding: 11%;
-  border: solid 3px;
-display: inline-block;
 }
 
 .galleryImg > a {
